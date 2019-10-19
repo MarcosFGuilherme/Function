@@ -20,11 +20,15 @@ public class Program {
 		showProduct(list);
 			
 		//List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
+		
 		//List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		
 		//List<String> names = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
 		
-		Function<Product, String> upperName = p -> p.getName().toUpperCase();
-		List<String> names = list.stream().map(upperName).collect(Collectors.toList());
+		//Function<Product, String> upperName = p -> p.getName().toUpperCase();
+		//List<String> names = list.stream().map(upperName).collect(Collectors.toList());
+		
+		List<String> names = list.stream().map( p -> p.getName().toUpperCase()).collect(Collectors.toList());
 		
 		showNames(names);
 		
