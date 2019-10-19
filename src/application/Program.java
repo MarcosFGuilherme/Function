@@ -20,8 +20,8 @@ public class Program {
 
 		showProduct(list);
 		
-		List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
-		
+		//List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
+		List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
 		showNames(names);
 		
 	}
